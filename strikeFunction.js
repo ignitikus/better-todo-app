@@ -1,2 +1,3 @@
-const allLi = document.querySelectorAll('li')
-
+document.querySelectorAll('li').addEventListener('click', ()=>{
+    
+})
