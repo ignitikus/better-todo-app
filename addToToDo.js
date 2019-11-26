@@ -1,7 +1,11 @@
 document.querySelector('.add-todo').addEventListener('click', ()=>{
     if(document.querySelector('.todo-input').value !== ''){
     let newLi = document.createElement('li')
-    newLi.innerText = (document.querySelector('.todo-input').value)
+    const entry = {
+        userInput: `${document.querySelector('.todo-input').value}`,
+        date: `${new Date()}`,
+    }
+    newLi.innerText = (entry.userInput + entry.date)
     document.querySelector('.todo-list').appendChild(newLi)
     document.querySelector('.todo-input').value = ''
     addsClassToLi()
