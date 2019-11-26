@@ -8,7 +8,7 @@ document.querySelector('.add-todo').addEventListener('click', ()=>{
         month: `${new Date().getMonth()+1}`,
         year: `${new Date().getFullYear()}`,
     }
-    newLi.innerText = `${entry.userInput}          ${entry.day}/${entry.month}/${entry.year}`
+    newLi.innerText = `${entry.userInput} (${entry.day}/${entry.month}/${entry.year})`
     document.querySelector('.todo-list').appendChild(newLi)
     document.querySelector('.todo-input').value = ''
     addsClassToLi()
@@ -25,8 +25,11 @@ document.querySelector(".todo-input").addEventListener("keydown", (event)=> {
             const entry = {
                 userInput: `${document.querySelector('.todo-input').value}`,
                 date: `${new Date()}`,
+                day: `${new Date().getDate()}`,
+                month: `${new Date().getMonth()+1}`,
+                year: `${new Date().getFullYear()}`,
             }
-            newLi.innerText = (entry.userInput + entry.date)
+            newLi.innerText = `${entry.userInput} (${entry.day}/${entry.month}/${entry.year})`
             document.querySelector('.todo-list').appendChild(newLi)
             document.querySelector('.todo-input').value = ''
             addsClassToLi()

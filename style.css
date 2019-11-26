@@ -1,5 +1,5 @@
 body{
-    background-image: url(./pics/backgroundImage1.jpg);
+    background-image: url(./backgroundImage1.jpg);
     background-size: cover;
     display: grid;
     grid-template-rows: 50px 70% 50px;
@@ -10,6 +10,10 @@ body{
 .btn{
     background-color: white;
     color: #0069D9;
+}
+
+.two-buttons{
+    display: flex;
 }
 
 .app{
