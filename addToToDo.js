@@ -18,7 +18,7 @@ document.querySelector('.add-todo').addEventListener('click', ()=>{
     }
 })
 
-document.querySelector(".todo-input").addEventListener("keydown", (event)=> {
+document.querySelector(".todo-input").addEventListener("keydown", ()=> {
     if (event.keyCode === 13) {
         if(document.querySelector('.todo-input').value !== ''){
             let newLi = document.createElement('li')
